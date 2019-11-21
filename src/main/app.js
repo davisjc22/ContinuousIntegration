@@ -12,4 +12,9 @@ app.listen(3000, () => {
     console.log('Example app listening on http://localhost:3000')
 })
 
+app.get('/cheese', (req, res) => {
+    // the .status(200) isn't necessary since it is the default return status
+    res.status(200).send('Cheese')
+})
+
 module.exports = app;
